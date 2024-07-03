@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onze tweede pagina</title>
+
+<style>
+
+p {
+    color:chocolate;
+    font-size: 20px;
+    text-align: center;
+}
+
+span {
+    color:chocolate;
+    font-size: 20px;
+}
+
+#table1 {
+    width: 100%;
+    border: 5px solid chocolate;
+}
+
+.tabel {
+    border: 2px solid chocolate;
+}
+
+</style>
+
+<script>
+    let ben = false; //boolean
+    let willem = 126; //integer
+    let daan = "stringetje"; //string
+    let t = 2;
+    let className = "tabel";
+</script>
+
+</head>
+<body>
+    
+<span>Dit is onze tweede pagina</span>
+<br>
+<span style="color: chocolate; font-size: 30px;">Made by Ben, Willem en Daan</span>
+<p>Op deze pagina laten we zien hoe goed wij zijn in HTML</p>
+
+<input type="text" id="textSize">
+<button type="button" onclick="readTextSize();">Knopje</button>
+
+<img src="https://www.beeztees.nl/wp-content/uploads/2017/01/shutterstock_235089946.jpg" style: width="50%">
+
+<table id="table1">
+    <tr class="tabel">
+        <td class="tabel">1</td>
+        <td class="tabel">2</td>
+    </tr>
+    <tr class="tabel">
+        <td class="tabel">3</td>
+        <td class="tabel">4</td>
+    </tr>
+</table>
+
+<a href="https://www.workingtalent.nl">Working Talent</a>
+<br>
+<a href="https://www.nos.nl">NOS</a>
+
+
+<script>
+    var table;
+    table = document.getElementById("table1")
+function tabelopmaak() {
+    table.style.fontSize = "40px";
+    document.getElementsByClassName(className)[4].style.backgroundColor = "yellow"
+}
+function readTextSize() {
+    let textSize = document.getElementById("textSize").value;
+changeTextSize(textSize)
+}
+function changeTextSize(text_size) {
+    document.getElementById("table1").style.fontSize = text_size + "px"
+}
+tabelopmaak();
+</script>
+</body>
+</html>

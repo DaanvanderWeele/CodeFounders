@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <!--Titel bovenaan het browservenster-->
+    <title>Mijn eerste pagina</title>
+
+    <!--Voorbeelden van tag styling, class styling, en id styling-->
+    <style>
+        span {
+            color:rgb(204, 78, 78);
+        }
+        p {
+            color:coral;
+        }
+    
+        .class1 {
+            color: aquamarine;
+            font-size: 24px;
+        }
+        #mijntabel {
+            color: cadetblue;
+            border: 10px dotted orangered;
+        }
+    </style>
+    <!--Vergelijkbaar met CSS, komt alle JS binnen de script tags-->
+    <!--Verschillende manieren om variabelen of constanten te definieren-->
+    <script>
+        var a = 12;
+        let b = "string";
+        const c = true;
+        var totalPriceWithTax;
+    </script>
+   <!--Apart scriptelement voor functies, mag ook in hetzelfde element-->
+   
+</head>
+<body>
+    
+    <!--Tags om tekst mee toe te voegen-->
+    <span class="class1">Losse tekst</span>
+    <span>Deze tekst komt er meteen achteraan</span>
+    <p>Alinea 1</p>
+    <p class="class1">Tussen alinea's zit ruimte</p>
+
+    <br>
+    <!--Afbeeldingen toevoegen aan pagina--> 
+    <!--Afbeelding gestijld met border in inline CSS-->
+    <!--Attribute toevoegen voor locatie, bestaande uit key (src) en value (locatie)-->
+    <img src="https://www.beeztees.nl/wp-content/uploads/2017/01/shutterstock_235089946.jpg" style="width: 50%; border: 25px solid chartreuse;"> <!--Image tag hoeft niet afgesloten te worden-->
+
+    <!--Een link plaatsen-->
+    <a href="http://apple.com">Link naar website of document</a>
+
+    <!--Tabellen maken-->
+    <table id= "mijntabel">
+        <tr>
+            <td>Cel 1</td>
+            <td>Cel 2</td>
+        </tr>
+        <tr>
+            <td>Cel 3</td>
+            <td>Cel 4</td>
+        </tr>
+    </table>
+
+    <input type="text" id="nieuwe-kleur">
+    <button type="button" onclick="veranderAchtergrondkleur();">
+
+    </button> 
+
+    <script>
+        //functie declaration
+        function veranderAchtergrondkleur(nieuweKleur) {
+             //Hiermee kan verwezen worden naar een bepaald element
+            document.getElementById("mijntabel").style.backgroundColor = nieuweKleur;
+        }
+        //nog niet gelukt, in index 2 een werkend voorbeeld
+        function leesKleur() {
+            let kleur = document.getElementById("nieuwe-kleur").value
+            veranderAchtergrondkleur(kleur)
+        }
+        leesKleur();
+        veranderAchtergrondkleur();
+
+        
+    </script>
+</body>
+</html>
