@@ -10,3 +10,5 @@ print(df["Name"])
 for r,rij in df.iterrows(): # for loop
     print(rij["Name"])
     #print(rij["Attack"])
+
+    
